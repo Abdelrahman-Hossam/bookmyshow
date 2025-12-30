@@ -3,6 +3,8 @@ import Header from "./components/shared/Header.jsx";
 import Footer from "./components/shared/Footer.jsx";
 import Home from "./pages/Home.jsx";
 import Movies from "./pages/Movies.jsx";
+import MovieDetails from "./pages/MovieDetails.jsx";
+import Profile from "./pages/Profile.jsx";
 
 function App() {
   return (
@@ -12,8 +14,10 @@ function App() {
         <main className="flex-grow">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/profile/:id" element={<h1>Profile Page</h1>} />
+            <Route path="/profile/:id" element={<Profile />} />
             <Route path="/movies" element={<Movies />} />
+            <Route path="/movies/:movieId" element={<MovieDetails />} />
+
           </Routes>
         </main>
         <Footer />
