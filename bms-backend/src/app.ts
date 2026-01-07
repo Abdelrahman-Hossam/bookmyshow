@@ -4,9 +4,7 @@ import dotenv from "dotenv";
 import cookieParser from "cookie-parser";
 
 dotenv.config();
-
-const app = express();
-
+const app = express();  
 app.use(
   cors({
     credentials: true,
@@ -15,10 +13,7 @@ app.use(
 );
 app.use(cookieParser());
 app.use(express.json());
-
-
 // Global error handler (MUST be after all routes)
-
 app.get("/", (_, res) => {
   res.json({
     message: "Welcome to BookMyScreen API",
